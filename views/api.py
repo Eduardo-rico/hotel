@@ -18,3 +18,8 @@ def predict(customer: CustomerInput):
     prediction = predict_customer_type(customer)
     customer_type = customer_type_mapping[int(prediction[0])]  
     return {"customer_type": customer_type}
+
+
+@router.get("/ok")
+def ok():
+    return {"message": "ok"}
