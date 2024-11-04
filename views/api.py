@@ -12,6 +12,10 @@ customer_type_mapping = {
     3: 'millennial_lifestyle'
 }
 
+@router.options("/predict")
+def options():
+    return {"Allow": "POST, OPTIONS"}
+
 
 @router.post("/predict")
 def predict(customer: CustomerInput):
