@@ -7,13 +7,12 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Puedes reemplazar "*" con ["http://localhost:3000"] para restringir el acceso.
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Registrar el router con las rutas de la API
 app.include_router(router)
 
 if __name__ == "__main__":
